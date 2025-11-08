@@ -1,0 +1,12 @@
+services:
+  asm-dev:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    platform: linux/amd64
+    volumes:
+      - .:/code
+    working_dir: /code
+    stdin_open: true
+    tty: true
+    container_name: asm-learning-env

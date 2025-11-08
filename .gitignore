@@ -1,0 +1,62 @@
+# Assembly build artifacts
+*.o
+*.obj
+*.lst
+*.elf
+
+# Executables (binaries without extensions)
+# Ignore all files without extensions in exercise directories
+*-basics/*/*
+*-intermediate/*/*
+*-advanced/*/*
+
+# But keep source files and documentation
+!*-basics/*/*.asm
+!*-basics/*/*.md
+!*-basics/*/*.sh
+!*-basics/*/Makefile
+!*-basics/*/*.template
+!*-intermediate/*/*.asm
+!*-intermediate/*/*.md
+!*-intermediate/*/*.sh
+!*-intermediate/*/Makefile
+!*-intermediate/*/*.template
+!*-advanced/*/*.asm
+!*-advanced/*/*.md
+!*-advanced/*/*.sh
+!*-advanced/*/Makefile
+!*-advanced/*/*.template
+
+# Test outputs
+test_output.txt
+*.log
+
+# Editor and IDE files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+
+# Backup files
+*.bak
+*.backup
+
+# Temporary files
+*.tmp
+temp/
+tmp/
+
+# Python (if using any test scripts)
+__pycache__/
+*.pyc
+*.pyo
+
+# Coverage and profiling
+*.gcov
+*.gcda
+*.gcno
+gmon.out
+perf.data
+perf.data.old

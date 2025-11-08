@@ -1,0 +1,39 @@
+# Ignore build artifacts
+*.o
+*.out
+01-basics/*/hello
+01-basics/*/add
+01-basics/*/conditional
+01-basics/*/loop
+01-basics/*/function
+01-basics/*/factorial
+01-basics/*/solution
+
+02-intermediate/*/strlen
+02-intermediate/*/array
+02-intermediate/*/strcmp
+02-intermediate/*/memcpy
+02-intermediate/*/args
+02-intermediate/*/solution
+
+03-advanced/*/bitcount
+03-advanced/*/fibonacci
+03-advanced/*/program
+03-advanced/*/filecp
+03-advanced/*/student
+03-advanced/*/hashtable
+03-advanced/*/solution
+
+# Ignore git files
+.git
+.gitignore
+
+# Ignore IDE files
+.vscode
+.idea
+*.swp
+*.swo
+*~
+
+# Ignore macOS files
+.DS_Store
