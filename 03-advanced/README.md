@@ -110,6 +110,20 @@ Learn how to:
 
 ---
 
+### 7. [Heap Allocation](07-heap-allocation/)
+**Topics**: Dynamic memory allocation, brk syscall, malloc/free implementation
+
+Learn how to:
+- Understand heap vs stack memory
+- Use the brk system call to grow the heap
+- Implement a simple memory allocator (malloc)
+- Manage dynamically allocated memory
+- Understand how real malloc() works
+
+**Time**: 4-5 hours
+
+---
+
 ## Learning Path
 
 ```
@@ -126,6 +140,8 @@ From 02-intermediate
 05-structures (Complex data organization)
     ↓
 06-hash-table (Real data structure)
+    ↓
+07-heap-allocation (Memory management)
     ↓
 Ready for expert topics!
 ```
@@ -235,6 +251,36 @@ section .text
     mov eax, [person+8]     ; Get age (offset 8)
     mov eax, [person+12]    ; Get height (offset 12)
     lea rsi, [person+16]    ; Get pointer to name (offset 16)
+```
+
+### Heap Allocation
+
+```asm
+; brk(addr) - set program break (grow/shrink heap)
+; Get current break
+mov rax, 12             ; sys_brk
+xor rdi, rdi            ; 0 = query current
+syscall                 ; returns current break in rax
+
+; Allocate 1024 bytes
+mov rdi, rax            ; Current break
+add rdi, 1024           ; New break = current + 1024
+mov rax, 12             ; sys_brk
+syscall                 ; returns new break in rax
+
+; Simple malloc implementation
+my_malloc:
+    ; Add header size and align to 16 bytes
+    add rdi, 16         ; Space for metadata
+    add rdi, 15
+    and rdi, -16        ; Round up to 16-byte boundary
+
+    ; Grow heap
+    call grow_heap
+
+    ; Return pointer (skip header)
+    add rax, 16
+    ret
 ```
 
 ## Common Patterns
@@ -547,10 +593,12 @@ You'll be ready to:
 ### Daily Practice (Recommended)
 - **Days 1-2**: Bit manipulation + experiments
 - **Days 3-4**: Stack frames
-- **Days 5-7**: File I/O
-- **Days 8-10**: Structures
-- **Days 11-14**: Hash table
-- **Days 15-16**: Review and projects
+- **Days 5-7**: Multi-file projects
+- **Days 8-10**: File I/O
+- **Days 11-13**: Structures
+- **Days 14-17**: Hash table
+- **Days 18-21**: Heap allocation
+- **Days 22-23**: Review and projects
 
 ### Challenge Projects
 

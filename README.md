@@ -195,6 +195,12 @@ Master advanced assembly programming techniques:
    - Insert and lookup operations
    - Building a key-value store
 
+7. **[07-heap-allocation](03-advanced/07-heap-allocation/)** - Dynamic memory allocation
+   - Understanding the heap vs stack
+   - Using the brk system call
+   - Implementing malloc/free
+   - Memory management fundamentals
+
 ## How to Use This Curriculum
 
 ### For Complete Beginners
@@ -237,9 +243,10 @@ You can move faster, but still:
 - **Days 29-31**: Multi-File Projects
 - **Days 32-34**: File I/O
 - **Days 35-37**: Structures
-- **Days 38-42**: Hash Table + Review
+- **Days 38-42**: Hash Table
+- **Days 43-47**: Heap Allocation + Review
 
-**Total time**: ~6-7 weeks of casual practice (1-2 hours/day)
+**Total time**: ~7-8 weeks of casual practice (1-2 hours/day)
 
 ## Building Programs
 
@@ -291,6 +298,7 @@ The [resources/](resources/) directory contains:
 - **[instruction-reference.md](resources/instruction-reference.md)** - x86-64 instruction guide
 - **[syscalls-linux.md](resources/syscalls-linux.md)** - Linux system calls reference
 - **[calling-conventions.md](resources/calling-conventions.md)** - Function calling rules
+- **[testing-guide.md](resources/testing-guide.md)** - Testing and debugging strategies
 
 ## Essential Tools
 
@@ -412,21 +420,21 @@ You've mastered a concept when you can:
 - Setup: 1-2 hours
 - 01-basics: 2-3 weeks (1 hour/day)
 - 02-intermediate: 2-3 weeks (1 hour/day)
-- 03-advanced: 3-4 weeks (1 hour/day)
-- Total: ~8-10 weeks
+- 03-advanced: 3-5 weeks (1 hour/day)
+- Total: ~8-11 weeks
 
 **Intermediate pace** (know some programming):
 - Setup: 30 minutes
 - 01-basics: 1-2 weeks (1-2 hours/day)
 - 02-intermediate: 1-2 weeks (1-2 hours/day)
-- 03-advanced: 2-3 weeks (1-2 hours/day)
-- Total: ~5-7 weeks
+- 03-advanced: 2-4 weeks (1-2 hours/day)
+- Total: ~5-8 weeks
 
 **Fast pace** (experienced programmer):
 - Setup: 15 minutes
 - 01-basics: 3-5 days (2-3 hours/day)
 - 02-intermediate: 4-6 days (2-3 hours/day)
-- 03-advanced: 7-10 days (2-3 hours/day)
+- 03-advanced: 8-12 days (2-3 hours/day)
 - Total: ~2-3 weeks
 
 ## What's Next?
